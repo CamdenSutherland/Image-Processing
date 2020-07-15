@@ -1,6 +1,6 @@
 # image_processing
 
-FIXME: description
+Image processing algorithms to transform images with Clojure
 
 ## Installation
 From https://clojure.org/guides/getting_started.
