@@ -3,7 +3,6 @@
 Image processing algorithms to transform images with Clojure
 
 ## Installation
-From https://clojure.org/guides/getting_started.
 **Install on Mac with Brew**
 `brew install clojure/tools/clojure`
 
@@ -20,7 +19,9 @@ sudo ./linux-install-1.10.1.536.sh`
 
 Accepts File Name 
 
-
+## Useful Links
+https://www.braveclojure.com/getting-started/
+https://clojure.org/guides/getting_started
 
 ## License
 
