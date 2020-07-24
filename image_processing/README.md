@@ -22,7 +22,6 @@ Navigate to source folder
 
 ## Examples:
 | | |
-|-|-|
 |<img width="100" alt="original" src="kodim20.png">|<img width="100" alt="greyscale" src="kodim20-greyscale.png">|
 |<img width="100" alt="inverted" src="kodim20-inverted.png">|<img width="100" alt="sobel" src="kodim20-sobel.png">|
 
