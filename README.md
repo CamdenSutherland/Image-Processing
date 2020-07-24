@@ -23,8 +23,8 @@ Navigate to source folder
 ## Examples:
 | | |
 |-|-|
-|<img width="100" alt="original" src="kodim20.png">|<img width="100" alt="greyscale" src="kodim20-greyscale.png">|
-|<img width="100" alt="inverted" src="kodim20-inverted.png">|<img width="100" alt="sobel" src="kodim20-sobel.png">|
+|<img width="100" alt="original" src="image_processing/kodim20.png">|<img width="100" alt="greyscale" src="image_processing/kodim20-greyscale.png">|
+|<img width="100" alt="inverted" src="image_processing/kodim20-inverted.png">|<img width="100" alt="sobel" src="image_processing/kodim20-sobel.png">|
 
 
 
