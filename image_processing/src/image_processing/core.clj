@@ -7,6 +7,10 @@
 (require '[clojure.string :as str])
 
 
+;;
+;; Absolute value method: Return the absolute value of a given input
+;;
+(defn abs [n] (max n (- n)))
 
 
 ;;
@@ -95,7 +99,7 @@
   [image x y [red green blue]]
      (let [rgb (+ (bit-shift-left red 16)
                   (bit-shift-left green 8)
-                  (bit-shift-left blue 0) ) ]
+                  (bit-shift-left blue 0) )]
        (.setRGB image x y rgb)
    ))
 
@@ -111,6 +115,30 @@
 )
 
 
+;;
+;; Horizontal sobel method: Return the output of the horizontal sobel filter on a pixel in an image
+;;
+(defn sobel_h [image x y]
+
+  (get-grey image x y)
+  (+(*(get-grey image (dec x) (dec y)) -1) (*(get-grey image (dec x) y) 0) (*(get-grey image (dec x)(inc y)) 1)
+    (*(get-grey image x (dec y)) -2)       (*(get-grey image x y) 0)       (*(get-grey image x(inc y)) 2)
+    (*(get-grey image (inc x) (dec y)) -1) (*(get-grey image (inc x) y) 0) (*(get-grey image (inc x)(inc y)) 1))
+  )
+
+
+;;
+;; Vertical sobel method: Return the output of the vetical sobel filter on a pixel in an image
+;;
+(defn sobel_v [image x y]
+
+  (get-grey image x y)
+  (+(*(get-grey image (dec x) (dec y)) 1)   (*(get-grey image (dec x) y) 2)   (*(get-grey image (dec x)(inc y)) 1)
+    (*(get-grey image x (dec y)) 0)         (*(get-grey image x y) 0)         (*(get-grey image x(inc y)) 0)
+    (*(get-grey image (inc x) (dec y)) -1)  (*(get-grey image (inc x) y) -2)  (*(get-grey image (inc x)(inc y)) -1))
+  )
+
+
 
 ;;
 ;; Load filters file
@@ -123,4 +151,11 @@
 (defn -main
   "Displays all the image processes"
   [& args]
-  (println "Image data methods:"))
+  (println "Processing Image:")
+  (greyscale "kodim20.png")
+  (invert "kodim20.png")
+  (sobel "kodim20.png")
+  (boxBlur "kodim20.png")
+  (unsharp "kodim20.png")
+  (linearSharpen "kodim20.png")
+  )

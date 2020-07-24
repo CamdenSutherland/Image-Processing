@@ -11,17 +11,33 @@ Image processing algorithms to transform images with Clojure
 chmod +x linux-install-1.10.1.536.sh
 sudo ./linux-install-1.10.1.536.sh`
 
+**Install Leiningen**
+`brew install leiningen`
+
 ## Usage
 
-`$ clj`
+Navigate to source folder
+`$ lein run`
 
-## Options
 
-Accepts File Name 
+## Examples:
+| | |
+|-|-|
+|<img width="100" alt="original" src="kodim20.png">|<img width="100" alt="greyscale" src="kodim20-greyscale.png">|
+|<img width="100" alt="inverted" src="kodim20-inverted.png">|<img width="100" alt="sobel" src="kodim20-sobel.png">|
+
+
 
 ## Useful Links
-https://www.braveclojure.com/getting-started/
-https://clojure.org/guides/getting_started
+[Leiningen](https://leiningen.org)
+
+[Brave Clojure](https://www.braveclojure.com/getting-started/)
+
+[Clojure.org](https://clojure.org/guides/getting_started)
+
+[Clojure Docs](https://clojuredocs.org)
+
+[Kodak Lossless True Color Image Suite](http://r0k.us/graphics/kodak/)
 
 ## License
 
